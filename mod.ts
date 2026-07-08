@@ -6,4 +6,7 @@
 export { buildProject, detectCycles, importHubs, type Cycle } from "./src/graph.ts";
 export { sizeReport, type FileSize } from "./src/size.ts";
 export { applyGolden, loadGolden, saveGolden, type Golden } from "./src/golden.ts";
-export { VERBS, cyclesVerb, godFilesVerb, hubsVerb } from "./src/verbs.ts";
+// The verbspec verb objects (VERBS, cyclesVerb, …) are the CLI projection — reach
+// them via the `./cli` entry, not the library API. Keeping them out of `.` keeps
+// the public library surface to the typed engine (and avoids JSR slow-types on
+// defineVerb's inferred generics).
