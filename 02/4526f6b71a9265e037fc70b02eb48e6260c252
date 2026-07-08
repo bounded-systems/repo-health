@@ -1,0 +1,19 @@
+.github/workflows/publish-jsr.yml
+  s_a031e3c760ac4e::t_dae5077b5418ed 3-6,9
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.3",
+  "base_commit_sha": "024526f6b71a9265e037fc70b02eb48e6260c252",
+  "prompts": {},
+  "sessions": {
+    "s_a031e3c760ac4e": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "d2fedc9b-3f9d-4587-b3eb-8b7fbc296a3b",
+        "model": "claude-opus-4-8"
+      },
+      "human_author": "Robert DeLanghe <1240090+bdelanghe@users.noreply.github.com>"
+    }
+  }
+}
