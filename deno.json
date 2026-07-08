@@ -1,0 +1,19 @@
+{
+  "name": "@bounded-systems/repo-health",
+  "version": "0.1.0",
+  "license": "PolyForm-Noncommercial-1.0.0",
+  "exports": {
+    ".": "./mod.ts",
+    "./cli": "./cli.ts"
+  },
+  "imports": {
+    "ts-morph": "npm:ts-morph@^23",
+    "verbspec": "jsr:@bounded-systems/verbspec@^0.3.1",
+    "zod": "npm:zod@^4.4.3"
+  },
+  "tasks": {
+    "check": "deno check mod.ts cli.ts",
+    "health": "deno run -A cli.ts",
+    "compile": "deno compile --allow-read --allow-env --output dist/repo-health cli.ts"
+  }
+}

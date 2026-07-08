@@ -1,0 +1,24 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  deno:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: denoland/setup-deno@v2
+        with:
+          deno-version: v2.x
+      - name: typecheck
+        run: deno check mod.ts cli.ts
+      - name: dogfood — repo-health gates its own structure
+        run: |
+          deno run -A cli.ts cycles    --include src --gate
+          deno run -A cli.ts god-files --include src --maxLoc 400 --gate
