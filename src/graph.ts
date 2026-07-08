@@ -21,7 +21,9 @@ export function buildProject(globs: string[]): Project {
       noEmit: true,
     },
   });
-  for (const g of globs) project.addSourceFilesAtPaths(g);
+  // One call so negation globs (`!pattern`, used to exclude generated/vendored
+  // files) apply against the positive patterns rather than being no-ops.
+  project.addSourceFilesAtPaths(globs);
   return project;
 }
 

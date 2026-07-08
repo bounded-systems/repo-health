@@ -64,6 +64,7 @@ export const godFilesVerb = defineVerb({
     ...gating,
     maxLoc: z.coerce.number().default(400),
     maxExports: z.coerce.number().default(25),
+    exclude: z.string().optional().describe("comma-separated globs (relative to root) to skip — e.g. generated files"),
   }),
   output: z.object({
     ok: z.boolean(),
@@ -73,7 +74,11 @@ export const godFilesVerb = defineVerb({
     overBudget: z.array(z.object({ file: z.string(), loc: z.number(), exports: z.number() })),
   }),
   run: (i) => {
-    const over = sizeReport([glob(i.root, i.include)], i.root)
+    const globs = [
+      glob(i.root, i.include),
+      ...(i.exclude ?? "").split(",").map((e) => e.trim()).filter(Boolean).map((e) => `!${i.root}/${e}`),
+    ];
+    const over = sizeReport(globs, i.root)
       .filter((f) => f.loc > i.maxLoc || f.exports > i.maxExports);
     const g = applyGolden(over, (f) => f.file, i);
     return {
