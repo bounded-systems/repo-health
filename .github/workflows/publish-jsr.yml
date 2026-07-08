@@ -1,7 +1,12 @@
 name: publish-jsr
 on:
+  # Tag-driven for normal releases; manual (workflow_dispatch) so a release can
+  # publish without a git tag when tag creation is governance-restricted. JSR
+  # versions by deno.json, not the tag — republishing an existing version is a
+  # no-op-fail, so this is safe to run against main.
   push:
     tags: ["v[0-9]+.[0-9]+.[0-9]+"]
+  workflow_dispatch: {}
 permissions:
   contents: read
   id-token: write # OIDC → JSR provenance
