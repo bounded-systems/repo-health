@@ -1,0 +1,25 @@
+LICENSE
+  s_a031e3c760ac4e::t_9378308be60f05 1-21
+README.md
+  s_a031e3c760ac4e::t_b7a033c9f6f573 37
+package.json
+  s_a031e3c760ac4e::t_1b6b56143d068d 4
+deno.json
+  s_a031e3c760ac4e::t_dc4bd753076a5b 4
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.3",
+  "base_commit_sha": "dba236276e1937026e0277b9979758f56ac52bc6",
+  "prompts": {},
+  "sessions": {
+    "s_a031e3c760ac4e": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "d2fedc9b-3f9d-4587-b3eb-8b7fbc296a3b",
+        "model": "claude-opus-4-8"
+      },
+      "human_author": "Robert DeLanghe <1240090+bdelanghe@users.noreply.github.com>"
+    }
+  }
+}
