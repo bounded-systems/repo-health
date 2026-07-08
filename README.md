@@ -34,4 +34,4 @@ v0.1.0 — `cycles`, `god-files`, `hubs` working. Known limits, honestly:
 
 ## License
 
-[PolyForm Noncommercial License 1.0.0](LICENSE).
+[MIT](LICENSE) — permissive, so it can gate any repo (including commercial pipelines), unlike the noncommercial bounded-systems products.
