@@ -1,0 +1,48 @@
+.github/workflows/binaries.yml
+  s_a031e3c760ac4e::t_a564bfa21ab48c 23
+  s_a031e3c760ac4e::t_f5e374038b4649 30
+  s_a031e3c760ac4e::t_bbdbd388de543b 2
+  s_e56816e0a67e91::t_6ffc32ffbe16f6 1,3-22,24-29,31-43
+CHANGELOG.md
+  s_a031e3c760ac4e::t_f53adcd812fe30 1-7
+mod.ts
+  s_a031e3c760ac4e::t_43d245cd82aab5 8
+src/golden.ts
+  s_a031e3c760ac4e::t_a8e35945e9affa 1-48
+package.json
+  s_a031e3c760ac4e::t_3aad8afbcb76e5 1-7
+src/verbs.ts
+  s_a031e3c760ac4e::t_03ebe573f27ff4 3-4,9,15-18,20,24,27,30-32,37-52,59,64,70-72,78-95
+.github/workflows/publish-jsr.yml
+  s_a031e3c760ac4e::t_d25c42990d1824 1-16
+.github/workflows/release.yml
+  s_a031e3c760ac4e::t_9252a2a8e4b1a5 1-21
+.github/workflows/version.yml
+  s_a031e3c760ac4e::t_44e0ef9f7b4ba0 1-18
+.release/README.md
+  s_a031e3c760ac4e::t_ab0d4be483bc9b 1-17
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.3",
+  "base_commit_sha": "ed430b3d2badd9a43d4152853a028a9eae9217ab",
+  "prompts": {},
+  "sessions": {
+    "s_a031e3c760ac4e": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "d2fedc9b-3f9d-4587-b3eb-8b7fbc296a3b",
+        "model": "claude-opus-4-8"
+      },
+      "human_author": "Robert DeLanghe <1240090+bdelanghe@users.noreply.github.com>"
+    },
+    "s_e56816e0a67e91": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "383dc5da-5e27-4ae1-a87b-793389a9aab0",
+        "model": "claude-opus-4-8"
+      },
+      "human_author": "Robert DeLanghe <1240090+bdelanghe@users.noreply.github.com>"
+    }
+  }
+}
