@@ -4,7 +4,7 @@
     {
       "name": "v0.1.0",
       "digest": {
-        "gitCommit": "af9855292da4732869b2c9c16f163ab09a52d506"
+        "gitCommit": "c533144d0705a1c2f8a9815dc56f0f4e22807121"
       }
     }
   ],
@@ -12,7 +12,7 @@
   "predicate": {
     "version": "0.1.0",
     "tag": "v0.1.0",
-    "commit": "af9855292da4732869b2c9c16f163ab09a52d506",
+    "commit": "c533144d0705a1c2f8a9815dc56f0f4e22807121",
     "date": "2026-07-08",
     "producer": "@bounded-systems/mint",
     "plan": {
