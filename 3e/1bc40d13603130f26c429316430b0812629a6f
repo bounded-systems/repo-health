@@ -1,0 +1,35 @@
+LICENSE
+  s_a031e3c760ac4e::t_ca4dcfc91590e8 1-133
+cli.ts
+  s_ffc8535e292fd2::t_d2480ba0b646a2 1-51
+deno.lock
+  s_a031e3c760ac4e::t_5643b82c606b58 1-163
+src/size.ts
+  s_ffc8535e292fd2::t_2d0f35209af9e7 1-25
+src/verbs.ts
+  s_ffc8535e292fd2::t_fcfc20004f2c89 1-84
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.3",
+  "base_commit_sha": "3e1bc40d13603130f26c429316430b0812629a6f",
+  "prompts": {},
+  "sessions": {
+    "s_a031e3c760ac4e": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "d2fedc9b-3f9d-4587-b3eb-8b7fbc296a3b",
+        "model": "claude-opus-4-8"
+      },
+      "human_author": "Robert DeLanghe <1240090+bdelanghe@users.noreply.github.com>"
+    },
+    "s_ffc8535e292fd2": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "192c2e26-da75-4ff8-9920-632cb4bf7868",
+        "model": "claude-opus-4-8"
+      },
+      "human_author": "Robert DeLanghe <1240090+bdelanghe@users.noreply.github.com>"
+    }
+  }
+}
