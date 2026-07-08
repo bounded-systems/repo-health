@@ -1,0 +1,21 @@
+mod.ts
+  s_a031e3c760ac4e::t_5b3770a0c2f442 9-12
+v0.1.0.intoto.json
+  s_a031e3c760ac4e::t_3c631f6a547ff7 1-26
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.3",
+  "base_commit_sha": "c533144d0705a1c2f8a9815dc56f0f4e22807121",
+  "prompts": {},
+  "sessions": {
+    "s_a031e3c760ac4e": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "d2fedc9b-3f9d-4587-b3eb-8b7fbc296a3b",
+        "model": "claude-opus-4-8"
+      },
+      "human_author": "Robert DeLanghe <1240090+bdelanghe@users.noreply.github.com>"
+    }
+  }
+}
