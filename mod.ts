@@ -5,4 +5,5 @@
 // import edges, not text) so comments/JSDoc can't produce phantom findings.
 export { buildProject, detectCycles, importHubs, type Cycle } from "./src/graph.ts";
 export { sizeReport, type FileSize } from "./src/size.ts";
+export { applyGolden, loadGolden, saveGolden, type Golden } from "./src/golden.ts";
 export { VERBS, cyclesVerb, godFilesVerb, hubsVerb } from "./src/verbs.ts";

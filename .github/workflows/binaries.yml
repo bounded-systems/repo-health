@@ -1,0 +1,43 @@
+name: binaries
+# Build the standalone `repo-health` binary for each platform and attach it to the
+# GitHub release for the tag. Uses `deno compile` cross-targeting from Linux.
+# mint's release.yml owns creating the release + provenance; this job only adds
+# assets, so it create-OR-uploads to be order-independent with that workflow.
+on:
+  push:
+    tags: ["v[0-9]+.[0-9]+.[0-9]+"]
+permissions:
+  contents: write # upload assets to the release
+jobs:
+  binaries:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
+      - uses: denoland/setup-deno@667a34cdef165d8d2b2e98dde39547c9daac7282 # v2.0.4
+        with:
+          deno-version: v2.x
+      - name: compile binaries
+        run: |
+          set -eu
+          mkdir -p dist
+          perms="--allow-read --allow-env"
+          for t in \
+            x86_64-unknown-linux-gnu \
+            aarch64-unknown-linux-gnu \
+            x86_64-apple-darwin \
+            aarch64-apple-darwin \
+            x86_64-pc-windows-msvc; do
+            out="dist/repo-health-$t"
+            [ "$t" = "x86_64-pc-windows-msvc" ] && out="$out.exe"
+            echo "compiling $t"
+            deno compile $perms --target "$t" --output "$out" cli.ts
+          done
+          ls -lh dist
+      - name: attach binaries to the release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        # mint's release.yml may create the release first (or not) — create-or-upload
+        # so this is order-independent with that workflow.
+        run: |
+          gh release create "${{ github.ref_name }}" dist/* --generate-notes --title "${{ github.ref_name }}" \
+            || gh release upload "${{ github.ref_name }}" dist/* --clobber
