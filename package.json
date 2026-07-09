@@ -1,8 +1,8 @@
 {
   "name": "@bounded-systems/repo-health",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "license": "MIT",
   "private": false,
   "type": "module",
-  "description": "Code-structure health signals (import cycles, god-files, hubs) as a verbspec CLI + CI gate — the internal-structure complement to drift-gate"
+  "description": "Repo health signals (import cycles, god-files, hubs, stale open PRs) as a verbspec CLI + CI gate — the internal-structure + repo-hygiene complement to drift-gate"
 }
