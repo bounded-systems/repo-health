@@ -8,14 +8,16 @@ const BIN = "repo-health";
 
 function usage(): string {
   const lines = [
-    "repo-health — code-health signals with no bounded-systems tool (cycles, god-files, hubs)",
+    "repo-health — repo health signals with no bounded-systems tool (cycles, god-files, hubs, stale-prs)",
     "",
     `Usage: ${BIN} <verb> [--flags]     (${BIN} <verb> --help for a verb's flags)`,
     "",
     "Verbs:",
   ];
   for (const [id, v] of Object.entries(VERBS)) {
-    lines.push(`  ${id.padEnd(11)} ${(v as { summary?: string }).summary ?? ""}`);
+    lines.push(
+      `  ${id.padEnd(11)} ${(v as { summary?: string }).summary ?? ""}`,
+    );
   }
   lines.push(
     "",
@@ -24,6 +26,8 @@ function usage(): string {
     `  ${BIN} cycles    --root . --include src --gate    # exit 1 on any cycle (CI)`,
     `  ${BIN} god-files --root . --include src --maxLoc 400 --gate`,
     `  ${BIN} hubs      --root . --include src --top 15`,
+    `  ${BIN} stale-prs --stale-days 14                   # open PRs older than 14d (repo from git remote / GITHUB_REPOSITORY)`,
+    `  ${BIN} stale-prs --repo bounded-systems/prx --gate # exit 1 if any stale open PR (CI)`,
   );
   return lines.join("\n");
 }

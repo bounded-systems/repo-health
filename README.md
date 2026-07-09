@@ -10,9 +10,12 @@ Built on the TypeScript compiler via `ts-morph`, so findings are **real import/e
 repo-health cycles    --root . --include src            # import cycles
 repo-health god-files --root . --include src            # files over a LOC/export budget
 repo-health hubs      --root . --include src --top 15    # import fan-in — what ripples widest
+repo-health stale-prs --stale-days 14                    # open PRs older than 14d (orphaned/forgotten)
 ```
 
 Each verb is a [verbspec](https://github.com/bounded-systems/verbspec) `VerbSpec`, so the same definitions project to **CLI (proactive)**, **exit code (CI gate)**, and **MCP** for free.
+
+`stale-prs` is the one signal that isn't in the source tree, so it reaches the **GitHub API** — resolving the repo from `--repo owner/name`, `GITHUB_REPOSITORY` (CI), or the git remote, and reading `GITHUB_TOKEN`/`GH_TOKEN` when present. It flags open PRs past `--stale-days`, the health signal for release/version PRs that were superseded but never closed. Its pure scorer is unit-tested; only the fetch touches the network.
 
 ## Proactive vs CI
 
@@ -28,7 +31,7 @@ Gate on **regressions**, not absolutes: pin the current findings as a committed 
 
 ## Status
 
-v0.1.0 — `cycles`, `god-files`, `hubs` working. Known limits, honestly:
+`cycles`, `god-files`, `hubs`, `stale-prs` working. Known limits, honestly:
 - The cycle detector reports a **cycle basis** (one representative cycle per back-edge in the DFS), not every elementary path — enough to flag a tangle and gate on it, but it can under-report distinct cycles that share a node. Tarjan-SCC / Johnson enumeration is the v0.2 upgrade.
 - `dead`-code (unused files/exports) and `verbs` (verbspec registry health) verbs are planned; today knip covers the former externally.
 
