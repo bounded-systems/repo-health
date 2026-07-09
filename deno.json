@@ -14,8 +14,9 @@
   },
   "tasks": {
     "check": "deno check mod.ts cli.ts",
+    "test": "deno test --allow-read",
     "health": "deno run -A cli.ts",
-    "compile": "deno compile --allow-read --allow-env --output dist/repo-health cli.ts"
+    "compile": "deno compile --allow-read --allow-env --allow-net --output dist/repo-health cli.ts"
   },
   "publish": {
     "exclude": ["*.intoto.json", ".release", "dist"]

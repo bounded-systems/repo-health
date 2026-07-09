@@ -18,6 +18,8 @@ jobs:
           deno-version: v2.x
       - name: typecheck
         run: deno check mod.ts cli.ts
+      - name: test
+        run: deno test --allow-read
       - name: dogfood — repo-health gates its own structure
         run: |
           deno run -A cli.ts cycles    --include src --gate
