@@ -1,0 +1,47 @@
+deno.json
+  s_a031e3c760ac4e::t_086856faf833ce 17,19
+.release/stale-prs-verb.md
+  s_a031e3c760ac4e::t_54563de652e7bd 1-4
+README.md
+  s_a031e3c760ac4e::t_5af44db7c8c792 34
+  s_a031e3c760ac4e::t_4febcbe1c70311 13,18
+  s_a031e3c760ac4e::t_9bf731442b13af 19
+src/prs_test.ts
+  s_a031e3c760ac4e::t_709cd144b9b1a1 1-90
+  s_a031e3c760ac4e::t_86127c91546579 91-124
+cli.ts
+  s_a031e3c760ac4e::t_6275576794cd55 29-30
+  s_a031e3c760ac4e::t_09ec3398f5ac67 11
+  s_a031e3c760ac4e::t_44349c34d8659e 18-20
+.github/workflows/ci.yml
+  s_a031e3c760ac4e::t_e9f44c1924aef2 21-22
+src/prs.ts
+  s_a031e3c760ac4e::t_4c5058e21c45ee 1-36,38-105,108-109,114-126,137,155,157
+  s_a031e3c760ac4e::t_c56f8b2bde024a 106-107,110-113,127-136,138-154,156
+  s_a031e3c760ac4e::t_1cd1ad262c2dee 37
+mod.ts
+  s_a031e3c760ac4e::t_31b50d874303a3 1-18
+  s_a031e3c760ac4e::t_6ea4d925f1d980 19-29
+src/verbs.ts
+  s_a031e3c760ac4e::t_96e1b3b8c7c716 10
+  s_a031e3c760ac4e::t_afc13967536ea4 232
+  s_a031e3c760ac4e::t_cede40bfded62d 25-26,39-43,53-57,59-61,63-65,72-73,81-83,90-92,97-99,114-119,122-124,141-148,152-227
+deno.lock
+  s_a031e3c760ac4e::t_1d718e537e7fb2 5-6,16-24
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.3",
+  "base_commit_sha": "3e0d2977e5ebe0642ca9f4cfcd9826cb28f08a12",
+  "prompts": {},
+  "sessions": {
+    "s_a031e3c760ac4e": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "d2fedc9b-3f9d-4587-b3eb-8b7fbc296a3b",
+        "model": "claude-opus-4-8"
+      },
+      "human_author": "Robert Delanghe <1240090+bdelanghe@users.noreply.github.com>"
+    }
+  }
+}
